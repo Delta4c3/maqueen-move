@@ -1,10 +1,9 @@
 enum RadioMessage {
-    message1 = 49434,
-    F = 24246,
-    B = 9031,
     L = 6987,
-    R = 57643,
-    S = 45537
+    B = 9031,
+    F = 24246,
+    S = 45537,
+    R = 57643
 }
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "F") {
@@ -67,7 +66,7 @@ let message = ""
 radio.setGroup(7)
 basic.clearScreen()
 basic.forever(function () {
-    message = "F"
-    radio.sendString("F")
+    message = "Send"
+    radio.sendString(message)
     basic.pause(100)
 })
